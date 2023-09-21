@@ -21,9 +21,9 @@ def main():
                 intersection = polygons[0].intersecting(polygons[1])
                 if conf.draw:
                     fig, ax = plt.subplots()
-                    polygons[0].draw(ax)
-                    polygons[1].draw(ax)
-                    intersection.draw(ax)
+                    polygons[0].draw(ax, 'b')
+                    polygons[1].draw(ax, 'r')
+                    intersection.draw(ax, 'g')
                     fig.savefig(conf.resultFolder + '/' + test[0])
                 resFile = open(conf.resultFolder + '/' + test[0] + '.txt', 'w')                  
                 resFile.write(str(intersection.vertexes))

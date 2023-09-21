@@ -8,6 +8,10 @@
 # Test in format <Test's name>: <Path to file>
 # Expected to list in format [[0, 3], [-2, 0], [0, -3], [2, 0]] into file
 
-EaseTest: EasyTest.txt
-HardTest: HardTest.txt
-TrivialityTest: TrivialityTest.txt
+EaseTest: tests/EasyTest.txt
+HardTest: tests/HardTest.txt
+TrivialityTest: tests/TrivialityTest.txt
+
+ZeroPointTest: tests/test0.txt
+OnePointTest: tests/test1.txt
+TwoPointTest: tests/test2.txt

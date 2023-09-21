@@ -5,13 +5,14 @@ class polygon:
     def __init__(self, vertexes: list) -> None:
         self.vertexes = vertexes
 
-    def draw(self, ax: plt.axes) -> None:
+    def draw(self, ax: plt.axes, color: str) -> None:
         coord = self.vertexes.copy()
         if (len(coord) == 0):
             return
         coord.append(coord[0]) 
         xs, ys = zip(*coord)
-        ax.plot(xs, ys)
+        ax.plot(xs, ys, color)
+        ax.plot(xs, ys, color + 'o')
     
     def isInsite(self, p) -> bool:
         for i, vertex in enumerate(self.vertexes):
