@@ -30,7 +30,7 @@ class polygon:
         q1 = poly.vertexes[j - 1]
         result = polygon([])
         inside = ""
-        while iteration < 2 * (len(self.vertexes) + len(poly.vertexes)):
+        while iteration <= 2 * (len(self.vertexes) + len(poly.vertexes)):
             if (utils.isSegmentIntersecting(p1, p2, q1, q2) and (q2[0]-q1[0]) * (p2[1]-p1[1]) - (p2[0]-p1[0]) * (q2[1]-q1[1]) != 0):
                 newVertex = utils.findSegmentIntersecting(p1, p2, q1, q2)
                 if (len(result.vertexes) != 0 and newVertex == result.vertexes[0] and result.vertexes[-1] != result.vertexes[0]):
@@ -84,5 +84,5 @@ class polygon:
             return poly
         if (poly.isInsite(p2)):
             return self
-        return polygon([])
+        return result
         

@@ -5,7 +5,6 @@ import os
 import ast
 
 def main():
-    print ([1.0, -0.0] == [1.0, 0.0])
     conf = config.config()
     conf.readConfig("config.txt")
     if not os.path.isdir(conf.resultFolder):
