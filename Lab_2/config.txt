@@ -1,0 +1,53 @@
+# Path for save result
+    result: result
+
+#Path to Test
+    test: test
+
+# If True add visualisation to result
+# Default False
+    draw: True
+
+# Test in format <Test's name>: <Path to file>
+# Expected to list in format [[0, 3], [-2, 0], [0, -3], [2, 0]] into file
+
+#random points from set
+test_0: test_0.txt
+#random points from set
+test_1: test_1.txt
+#new random point
+test_2: test_2.txt
+#positive test
+test_3: test_3.txt
+#positive test
+test_4: test_4.txt
+#positive test
+test_5: test_5.txt
+#new random point
+test_6: test_6.txt
+#new random point
+test_7: test_7.txt
+#new random point
+test_8: test_8.txt
+#new random point
+test_9: test_9.txt
+#random points from set
+test_10: test_10.txt
+#new random point
+test_11: test_11.txt
+#positive test
+test_12: test_12.txt
+#random points from set
+test_13: test_13.txt
+#positive test
+test_14: test_14.txt
+#new random point
+test_15: test_15.txt
+#new random point
+test_16: test_16.txt
+#new random point
+test_17: test_17.txt
+#positive test
+test_18: test_18.txt
+#random points from set
+test_19: test_19.txt
