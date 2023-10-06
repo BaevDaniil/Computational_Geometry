@@ -1,8 +1,9 @@
 import utils
 import matplotlib.pyplot as plt
-import time
+import random
 
 def miniDisk(points: list):
+    random.shuffle(points)
     if (len(points) <= 2):
         return points
     disk = [points[0], points[1]]
@@ -14,6 +15,7 @@ def miniDisk(points: list):
     return disk
 
 def MiniDiskWithPoint(points: list, q: list):
+    random.shuffle(points)
     disk = [points[0], q]
 
     for j in range(1, len(points)):
@@ -32,3 +34,12 @@ def MiniDiskWith2Points(points: list, q1: list, q2: list):
         else:
             disk = [q1, q2, points[k]]
     return disk
+
+def CheckDisc(points: list, disc: list):
+    for point in points:
+        if utils.isInsideDisk(disc, point) > 0:
+            return False
+    if len(disc) == 3 and utils.classifyTriangle(disc[0], disc[1], disc[2]) == -1:
+        return False
+    return True
+

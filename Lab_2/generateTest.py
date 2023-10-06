@@ -36,7 +36,7 @@ def generateTest(numOfTest: int, maxNumOfPoint: int, space:list, dirForTest, con
             else:
                 configFile.write('#random points from set\n')
                 while True:
-                    disc = [points[random.randint(0, len(points))] for i in range(random.randint(0, 3))]
+                    disc = [points[random.randint(-1, len(points) - 1)] for i in range(random.randint(0, 3))]
                     if not utils.isEqualDisc(disc, trueDisk): break
         file = open(dirForTest + '/test_' + str(i) + '.txt', 'w')
         file.write(str(points) + '\n')        
@@ -51,14 +51,14 @@ def generateTest(numOfTest: int, maxNumOfPoint: int, space:list, dirForTest, con
 
 
 if __name__== "__main__":
-    numOfTest = 20
-    spase = [[-100, 100], [-100, 100]]
-    maxNumOfPoint = 50
+    numOfTest = 50
+    spase = [[-50, 250], [-100, 100]]
+    maxNumOfPoint = 100
 
     conf = config.config()
     conf.readConfig("config.txt")
-    if not os.path.isdir(conf.resultFolder):
-        os.mkdir(conf.resultFolder)
+    if not os.path.isdir(conf.testFolder):
+        os.mkdir(conf.testFolder)
 
     if len(conf.tests) != 0:
         print("In config.txt is old tests!")

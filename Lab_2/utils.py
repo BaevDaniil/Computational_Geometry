@@ -18,7 +18,7 @@ def det3x3(matrix3x3):
 
 def isInsideDisk(disk: list, point):
     if len(disk) == 0:
-        return -1
+        return 1
     if len(disk) == 1:
         if disk[0] == point:
             return 0
@@ -87,3 +87,18 @@ def isEqualDisc(disk1: list, disk2: list):
         if isInsideDisk(disk1, point) != 0:
             return False
     return True
+
+
+def len_x_len(a, b):
+    return (a[0] - b[0]) * (a[0] - b[0]) + (a[1] - b[1]) * (a[1] - b[1])
+
+def classifyTriangle(a, b, c):
+    ab_x_ab = len_x_len(a, b)
+    bc_x_bc = len_x_len(b, c)
+    ac_x_ac = len_x_len(a, c)
+    if ab_x_ab + bc_x_bc == ac_x_ac or bc_x_bc + ac_x_ac == ab_x_ab or ac_x_ac + ab_x_ab == bc_x_bc:
+        return 0
+    elif ab_x_ab + bc_x_bc < ac_x_ac or bc_x_bc + ac_x_ac < ab_x_ab or ac_x_ac + ab_x_ab < bc_x_bc:
+        return -1
+    else:
+        return 1

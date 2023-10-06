@@ -13,6 +13,10 @@ def main():
     if not os.path.isdir(conf.resultFolder):
         os.mkdir(conf.resultFolder)
     
+    resFile = open(conf.resultFolder + '/result.txt', 'w')
+
+    unswer = []
+
     for test in conf.tests:
         points = []
         disc = []
@@ -21,9 +25,10 @@ def main():
             points = ast.literal_eval(line)
             line = testFile.readline()
             disc = ast.literal_eval(line)
+            unswer.append(minimalDisc.CheckDisc(points, disc))
 
-            trueDisc = minimalDisc.miniDisk(points)
             if conf.draw:
+                trueDisc = minimalDisc.miniDisk(points)
                 fig, ax = plt.subplots()
                 for [x, y] in points:
                     param = utils.isInsideDisk(disc, [x, y])
@@ -39,10 +44,8 @@ def main():
                     utils.drawDisk(disc, ax)
                     utils.drawDisk(trueDisc, ax)
                 fig.savefig(conf.resultFolder + '/' + test[0])
-
-            resFile = open(conf.resultFolder + '/' + test[0] + '.txt', 'w')                  
-            resFile.write(str(utils.isEqualDisc(trueDisc, disc)))
-            resFile.close()
+    resFile.write(str(unswer))
+    resFile.close()
     fig, ax = plt.subplots()
 
 if __name__== "__main__":

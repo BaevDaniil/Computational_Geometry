@@ -11,7 +11,7 @@
 # Test in format <Test's name>: <Path to file>
 # Expected to list in format [[0, 3], [-2, 0], [0, -3], [2, 0]] into file
 
-#random points from set
+#new random point
 test_0: test_0.txt
 #random points from set
 test_1: test_1.txt
@@ -19,35 +19,95 @@ test_1: test_1.txt
 test_2: test_2.txt
 #positive test
 test_3: test_3.txt
-#positive test
+#random points from set
 test_4: test_4.txt
-#positive test
+#random points from set
 test_5: test_5.txt
-#new random point
+#positive test
 test_6: test_6.txt
-#new random point
+#positive test
 test_7: test_7.txt
 #new random point
 test_8: test_8.txt
 #new random point
 test_9: test_9.txt
-#random points from set
+#positive test
 test_10: test_10.txt
 #new random point
 test_11: test_11.txt
-#positive test
+#new random point
 test_12: test_12.txt
-#random points from set
+#positive test
 test_13: test_13.txt
-#positive test
+#new random point
 test_14: test_14.txt
-#new random point
+#random points from set
 test_15: test_15.txt
-#new random point
+#random points from set
 test_16: test_16.txt
-#new random point
+#random points from set
 test_17: test_17.txt
-#positive test
+#new random point
 test_18: test_18.txt
 #random points from set
 test_19: test_19.txt
+#new random point
+test_20: test_20.txt
+#positive test
+test_21: test_21.txt
+#new random point
+test_22: test_22.txt
+#random points from set
+test_23: test_23.txt
+#positive test
+test_24: test_24.txt
+#positive test
+test_25: test_25.txt
+#positive test
+test_26: test_26.txt
+#random points from set
+test_27: test_27.txt
+#random points from set
+test_28: test_28.txt
+#positive test
+test_29: test_29.txt
+#random points from set
+test_30: test_30.txt
+#new random point
+test_31: test_31.txt
+#new random point
+test_32: test_32.txt
+#new random point
+test_33: test_33.txt
+#random points from set
+test_34: test_34.txt
+#new random point
+test_35: test_35.txt
+#new random point
+test_36: test_36.txt
+#positive test
+test_37: test_37.txt
+#positive test
+test_38: test_38.txt
+#new random point
+test_39: test_39.txt
+#random points from set
+test_40: test_40.txt
+#random points from set
+test_41: test_41.txt
+#random points from set
+test_42: test_42.txt
+#new random point
+test_43: test_43.txt
+#random points from set
+test_44: test_44.txt
+#new random point
+test_45: test_45.txt
+#new random point
+test_46: test_46.txt
+#random points from set
+test_47: test_47.txt
+#positive test
+test_48: test_48.txt
+#random points from set
+test_49: test_49.txt
